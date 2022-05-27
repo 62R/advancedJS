@@ -14,7 +14,7 @@ const renderProduct = (item) => {
                 <img src = 'https://picsum.photos/200/300?random=${i}'>                
                 <div class="text-wrap">
                     <h3>${item.title}</h3>
-                    <p>${item.price}</p>
+                    <p>${item.price} $</p>
                 </div>
                 <button class="buy-btn">Купить</button>
             </div>`

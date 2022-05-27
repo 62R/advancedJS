@@ -15,8 +15,14 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 300px;
-    border: 2px solid grey;
-    padding: 5px;
+    //border: 2px solid grey;
+    box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+
+    img {
+        border-radius: 5px;
+    }
 }
 
 .text-wrap {
@@ -27,6 +33,13 @@ main {
 
 .buy-btn {
     background-color: transparent;
-    border: 2px solid grey;
+    border: 2px solid lightseagreen;
+    color: seagreen;
     padding: 5px;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: lightseagreen;
+        color: white;
+    }
 }
