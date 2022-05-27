@@ -1,0 +1,32 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.products {
+    width: 90vh;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border: 2px solid grey;
+    padding: 5px;
+}
+
+.text-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buy-btn {
+    background-color: transparent;
+    border: 2px solid grey;
+    padding: 5px;
+}
