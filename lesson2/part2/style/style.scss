@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.burger {
+    padding: 20px 20px 0 20px;
+    margin: 0 auto;
+    max-width: 1140px;
+    min-height: 100vh;
+    background-color: lightcoral;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__button-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__submit-btn {
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 3px;
+        padding: 5px 10px;
+        color: white;
+
+        &:hover {
+            background-color: white;
+            color: lightcoral;
+        }
+    }
+}
+
+.burger__heading {
+    margin-bottom: 20px;
+}
+
+.burger-selector {
+    &__heading {
+        margin-bottom: 10px;
+    }
+
+    &__label-wrapper {
+        display: flex;
+        gap: 30px;
+    }
+}
