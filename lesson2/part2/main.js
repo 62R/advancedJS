@@ -108,7 +108,7 @@ stuffingSelector.forEach((element) => {
 toppingSelector.forEach((element) => {
 
     element.addEventListener('click', function (event) {
-        event.target.checked ? burger.addTopping(event.target.dataset.topping) : burger.removeTopping(event.target.dataset.topping);
+        event.target.checked ? burger.addTopping(event.target.dataset.to) : burger.removeTopping(topping);
     });
 
     if (element.checked) {
