@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div class="burger">
+        <h1 class="burger__heading">
+            Собери свой бургер
+        </h1>
+        <form class="burger__form">
+            <div class="burger-selector burger-selector_type_size">
+                <h2 class="burger-selector__heading">
+                    Выберете размер бургера
+                </h2>
+                <div class="burger-selector__label-wrapper"><label class="burger-selector__input-label">
+                        <input type="radio" name="burger-size" data-size="large">
+                        Большой
+                    </label>
+                    <label class="burger-selector__input-label">
+                        <input type="radio" name="burger-size" data-size="small" checked>
+                        Маленький
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="burger-selector burger-selector_type_stuffing">
+                <h2 class="burger-selector__heading">
+                    Выберете начинку бургера
+                </h2>
+                <div class="burger-selector__label-wrapper">
+                    <label class="burger-selector__input-label">
+                        <input type="radio" name="burger-stuffing" data-stuffing="cheese" checked>
+                        Сыр
+                    </label>
+                    <label class="burger-selector__input-label">
+                        <input type="radio" name="burger-stuffing" data-stuffing="salad">
+                        Салат
+                    </label>
+                    <label class="burger-selector__input-label">
+                        <input type="radio" name="burger-stuffing" data-stuffing="potato">
+                        Картофель
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="burger-selector burger-selector_type_topping">
+                <h2 class="burger-selector__heading">
+                    Выберете дополнения для бургера
+                </h2>
+                <div class="burger-selector__label-wrapper">
+                    <label class="burger-selector__input-label">
+                        <input type="checkbox" name="burger-topping" data-topping="spice">
+                        Посыпать приправой
+                    </label>
+                    <label class="burger-selector__input-label">
+                        <input type="checkbox" name="burger-topping" data-topping="mayo" checked>
+                        Добавить майонез
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="burger__button-wrapper">
+                <button type="button" class="burger__submit-btn" value="getPrice">
+                    Посчитать стоимость и каллорийность
+                </button>
+            </div>
+
+
+
+        </form>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
