@@ -117,10 +117,33 @@ class Cart {
         this.cartList.pust(newProduct);
         this.render();
     }
+
+    removeProduct(event) {
+        const newProductId = event.target.closest('.product-item').dataset.id;
+        for (let product of this.cartList) {
+            if (newProductId == product.id_product) {
+                product.quantity += 1;
+
+                this.render();
+                return;
+            }
+        }
+        const newProduct = {};
+        list.goods.forEach((listEl) => {
+            if (listEl.id = newProduct) {
+                newProduct = listEl;
+            }
+        });
+        this.cartList.pust(newProduct);
+        this.render();
+    }
+}
+
+class CartItem {
+
 }
 
 let list = new ProductsList();
-console.log(list.allProducts);
 
 let cart = new Cart();
 

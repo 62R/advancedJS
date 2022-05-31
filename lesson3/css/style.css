@@ -96,13 +96,15 @@ img {
 
 .cart {
     position: absolute;
+    visibility: hidden;
     top: 40px;
     right: 0;
     background-color: white;
     color: black;
     border: 2px solid grey;
     border-radius: 5px;
-    display: none;
+    transition: opacity 1s, visibility 1s;
+    opacity: 0;
 }
 
 .cart__table {
@@ -114,6 +116,8 @@ td {
     padding: 2px 6px;
 }
 
+
 .cart_status_opened {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
