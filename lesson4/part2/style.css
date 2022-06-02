@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+}
+
+button,
+input,
+textarea {
+    border: 2px solid black;
+    padding: 5px 10px;
+    font-size: 16pt;
+    background: transparent;
+}
+
+button:hover {
+    background-color: grey;
+    color: white;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto 0 auto;
+    width: 500px;
+    gap: 20px;
+}
+
+.wrong {
+    border-color: red;
+    box-shadow: 0 0 20px red;
+}
+
+.correct {
+    border-color: lightgreen;
+    box-shadow: 0 0 20px lightgreen;
+}
