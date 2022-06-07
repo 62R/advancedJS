@@ -6,18 +6,17 @@ const app = new Vue({
         catalogUrl: '/catalogData.json',
         cartUrl: '/getBasket.json',
         products: [],
-        renderProducts: [],
         filtered: [],
         cart: [],
         imgCatalog: 'https://via.placeholder.com/200x150',
         userSearch: '',
-        show: false
+        show: false,
+        showCart: false,
     },
     methods: {
         filter() {
             const regexp = new RegExp(this.userSearch, 'i');
             this.filtered = this.products.filter(product => regexp.test(product.product_name));
-            this.renderProducts = [...this.filtered];
         },
         getJson(url) {
             return fetch(url)
@@ -50,14 +49,15 @@ const app = new Vue({
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);
+                    this.filtered.push(el);
                 }
             });
         this.getJson(`getProducts.json`)
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);
+                    this.filtered.push(el);
                 }
-                this.renderProducts = [...this.products];
             });
         this.getJson(`${API + this.cartUrl}`)
             .then(data => {
