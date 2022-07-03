@@ -1,0 +1,10 @@
+.cart-popup-item {
+    display: flex;
+
+    &__img {
+        display: block;
+        width: 120px;
+        height: 140px;
+        object-fit: cover;
+    }
+}
