@@ -1,0 +1,51 @@
+.cart-popup {
+    position: relative;
+
+    &__button {
+        position: relative;
+        display: flex;
+
+        span {
+            @include display-flex-center();
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            color: $alt-color;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            background-color: $main-color;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 47px;
+        right: 0;
+        list-style-type: none;
+        width: 500px;
+        background-color: $alt-color;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        padding: 5px;
+    }
+
+    &__link {
+        @include text-font-style();
+        display: block;
+        width: fit-content;
+        margin: 5px auto;
+        padding: 5px 15px;
+        border: 1px solid $main-color;
+        text-decoration: none;
+        color: $main-color;
+    }
+
+    &__text {
+        @include text-font-style();
+        font-weight: 400;
+        text-align: center;
+    }
+}
