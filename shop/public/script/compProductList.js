@@ -4,6 +4,7 @@ Vue.component('product-list', {
         return {
             catalogUrl: '/api/products',
             products: [],
+            filtered: []
         }
     },
     mounted() {
@@ -11,15 +12,22 @@ Vue.component('product-list', {
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);
+                    this.filtered.push(el);
                 }
             })
     },
+    methods: {
+        filterProduct(userSearch) {
+            let regExp = new RegExp(userSearch, 'i');
+            this.filtered = this.products.filter(el => regExp.test(el.product_name));
+        }
+    },
     template: `
     <ul class="product-list">
-        <product v-for="item of products.slice(0,productCount)"
+        <product v-for="item of filtered.slice(0,productCount)"
         :product="item"
         :key="item.id"
-        @add-product="$root.cart.addProduct"></product>
+        @add-product="$parent.$refs.cart.addProduct"></product>
     </ul>
     `
 });

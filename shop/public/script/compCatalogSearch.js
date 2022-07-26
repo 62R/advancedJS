@@ -1,10 +1,9 @@
-'use strict'
-
 Vue.component('comp-catalog-search', {
     props: ['buttonClass'],
     data() {
         return {
-            filterShow: false
+            filterShow: false,
+            userSearch: ''
         }
     },
     template: `
@@ -18,9 +17,8 @@ Vue.component('comp-catalog-search', {
             </button>   
             <transition name="catalog-search">
                 <div class="catalog-search" v-show="filterShow">
-                    <form class="catalog-search__form">
-                        <input class="catalog-search__input" type="text" placeholder="Запрос">
-
+                    <form action="#" class="catalog-search__form" @submit.prevent="$parent.$refs.products.filterProduct(userSearch)">
+                        <input class="catalog-search__input" type="text" placeholder="Запрос" v-model="userSearch">
                         <button :class="buttonClass" type="submit">
                             <svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg">
                                 <path

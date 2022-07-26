@@ -35,6 +35,8 @@ $product-veiwer-margin: 75px;
     &__img {
         margin-top: 11px;
         margin-bottom: $product-veiwer-margin;
+        max-height: 700px;
+        object-fit: cover;
     }
 
     &__info {

@@ -1,5 +1,6 @@
 .cart-popup {
     position: relative;
+    z-index: 2;
 
     &__button {
         position: relative;
@@ -22,11 +23,14 @@
     }
 
     &__list {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
         position: absolute;
         top: 47px;
         right: 0;
         list-style-type: none;
-        width: 500px;
+        width: 350px;
         background-color: $alt-color;
         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
         padding: 5px;
@@ -34,18 +38,30 @@
 
     &__link {
         @include text-font-style();
-        display: block;
-        width: fit-content;
-        margin: 5px auto;
+        @include button-style();
         padding: 5px 15px;
-        border: 1px solid $main-color;
-        text-decoration: none;
-        color: $main-color;
+        font-size: 14px;
+        line-height: 16px;
     }
 
     &__text {
         @include text-font-style();
         font-weight: 400;
         text-align: center;
+    }
+
+    &__total-info {
+        padding: 5px 10px 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__total-price {
+        text-align: right;
+
+        span {
+            font-weight: bold;
+        }
     }
 }

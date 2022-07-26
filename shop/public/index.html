@@ -37,7 +37,7 @@
                             </svg></a>
                     </li>
                     <li class="main-nav__item">
-                        <cart button-class="main-nav__button"></cart>
+                        <cart-popup ref="cart" button-class="main-nav__button"></cart-popup>
                     </li>
                 </ul>
             </nav>
@@ -80,18 +80,16 @@
                     </div>
                 </section>
 
-
                 <div class="product-list-wrap product-list-wrap_margin_index">
                     <section class="products-section">
                         <h2 class="products-section__h2">Fetured Items</h2>
                         <p class="products-section__text">Shop for items based on what we
                             featured
                             in this week</p>
-                        <product-list product-count=9></product-list>
+                        <product-list product-count=6 ref="products"></product-list>
                         <a href="catalog.html" class="products-section__browse-button">Browse All Product</a>
                     </section>
                 </div>
-
 
             </div>
         </main>
@@ -158,7 +156,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="script/compHeaderMenu.js"></script>
     <script src="script/compCatalogSearch.js"></script>
-    <script src="script/compCart.js"></script>
+    <script src="script/compCartPopup.js"></script>
     <script src="script/compProductList.js"></script>
     <script src="script/main.js"></script>
 
