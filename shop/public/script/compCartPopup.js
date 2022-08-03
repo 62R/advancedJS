@@ -31,8 +31,12 @@ Vue.component('cart-popup', {
                 this.$parent.postJson(`${this.cartUrl}`, newCartEl)
                     .then(data => {
                         if (data.result === 1) {
-                            this.cart.list.push(Object.assign(product));
-                            this.$set(this.cart.list.at(-1), 'quantity', 1);
+                            this.$set(this.cart.list, this.cart.list.length, {});
+                            this.$set(this.cart.list.at(-1), 'id_product', newCartEl.id_product);
+                            this.$set(this.cart.list.at(-1), 'product_name', newCartEl.product_name);
+                            this.$set(this.cart.list.at(-1), 'price', newCartEl.price);
+                            this.$set(this.cart.list.at(-1), 'img', newCartEl.img);
+                            this.$set(this.cart.list.at(-1), 'quantity', newCartEl.quantity);
                             this.cart.totalQuantity++;
                             this.cart.totalPrice += newCartEl.price;
                         }
@@ -55,7 +59,8 @@ Vue.component('cart-popup', {
             this.$parent.putJson(`${this.cartUrl}/${cartItem['id_product']}/increase`)
                 .then(data => {
                     if (data.result === 1) {
-                        cartItem.quantity++;
+                        const find = this.cart.list.find((el) => el.id_product === cartItem.id_product)
+                        find.quantity++;
                         this.cart.totalQuantity++;
                         this.cart.totalPrice += cartItem.price;
                     } else {
